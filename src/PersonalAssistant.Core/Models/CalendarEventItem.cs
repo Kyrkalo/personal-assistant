@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace PersonalAssistant.Core.Models;
 
-namespace PersonalAssistant.Core.Models
+public class CalendarEventItem
 {
-    internal class CalendarEventItem
-    {
-    }
+    public string Title { get; init; } = string.Empty;
+    public DateTime Start { get; init; }
+    public DateTime End { get; init; }
+    public string? Location { get; init; }
 }

@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PersonalAssistant.Core.Abstractions;
+﻿namespace PersonalAssistant.Core.Abstractions;
 
 public interface IAuthService
 {
+    Task<string> LoginAsync(string provider, CancellationToken cancellationToken = default);
 }
