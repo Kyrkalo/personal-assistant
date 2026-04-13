@@ -53,4 +53,5 @@ CodeCoverage/
 TestResult.xml
 nunit-*.xml
 /.vs
-/src/.vs/PersonalAssistant
+/.vs/
+/src/.vs
