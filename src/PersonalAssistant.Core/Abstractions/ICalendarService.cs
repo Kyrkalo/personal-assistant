@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using PersonalAssistant.Core.Models;
 
 namespace PersonalAssistant.Core.Abstractions;
 
 public interface ICalendarService
 {
+    Task<IReadOnlyList<CalendarEventItem>> GetEventsForTodayAsync(CancellationToken cancellationToken = default);
 }

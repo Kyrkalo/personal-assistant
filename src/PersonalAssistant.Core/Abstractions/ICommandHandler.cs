@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PersonalAssistant.Core.Abstractions;
+﻿namespace PersonalAssistant.Core.Abstractions;
 
 public interface ICommandHandler
 {
+    (string, bool) CanExecute(string input);
+
+    Task<string> ExecuteAsync(string input, CancellationToken cancellationToken = default);
 }
