@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace PersonalAssistant.Core.Models;
 
-namespace PersonalAssistant.Core.Models
+public class AssistantResponse
 {
-    internal class AssistantResponse
-    {
-    }
+    public string Text { get; init; } = string.Empty;
+    public bool IsError { get; init; }
+
+    public static AssistantResponse Success(string text) => new() { Text = text };
+    public static AssistantResponse Error(string message) => new() { Text = message, IsError = true };
 }

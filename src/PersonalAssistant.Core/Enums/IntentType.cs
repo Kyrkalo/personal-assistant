@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace PersonalAssistant.Core.Enums;
 
-namespace PersonalAssistant.Core.Enums
+public enum IntentType
 {
-    internal class IntentType
-    {
-    }
+    Unknown,
+    Help,
+    Today,
+    Login,
+    CreateEvent,
+    GetEvents,
+    ExtractEventFromImage,
+    SyncCalendars
 }

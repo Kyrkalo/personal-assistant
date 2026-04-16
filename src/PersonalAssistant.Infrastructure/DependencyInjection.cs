@@ -1,12 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.Extensions.DependencyInjection;
+using PersonalAssistant.Core.Abstractions;
+using PersonalAssistant.Infrastructure.Auth;
+using PersonalAssistant.Infrastructure.Calendar;
 
-namespace PersonalAssistant.Infrastructure
+namespace PersonalAssistant.Infrastructure;
+
+public static class DependencyInjection
 {
-    internal class DependencyInjection
+    public static IServiceCollection AddInfrastructure(this IServiceCollection services)
     {
+        // Swap Fake* for real implementations when ready
+        services.AddScoped<ICalendarService, FakeCalendarService>();
+        services.AddScoped<IAuthService, FakeAuthService>();
+
+        return services;
     }
 }
