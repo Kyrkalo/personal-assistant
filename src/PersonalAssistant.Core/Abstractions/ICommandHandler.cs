@@ -2,7 +2,7 @@
 
 public interface ICommandHandler
 {
-    (string, bool) CanExecute(string input);
+    bool CanHandle(string input);
 
-    Task<string> ExecuteAsync(string input, CancellationToken cancellationToken = default);
+    Task<string> HandleAsync(string input, CancellationToken cancellationToken = default);
 }

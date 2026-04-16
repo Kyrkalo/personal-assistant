@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using PersonalAssistant.Core.Abstractions;
 
-namespace PersonalAssistant.Infrastructure.Auth
+namespace PersonalAssistant.Infrastructure.Auth;
+
+public class FakeAuthService : IAuthService
 {
-    internal class FakeAuthService
-    {
-    }
+    public Task<string> LoginAsync(string provider, CancellationToken cancellationToken = default) =>
+        Task.FromResult($"[Fake] Logged in with {provider}.");
 }

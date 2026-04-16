@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.Extensions.DependencyInjection;
 
-namespace PersonalAssistant.Cli
+namespace PersonalAssistant.Cli;
+
+public static class DependencyInjection
 {
-    internal class DependencyInjection
+    public static IServiceCollection AddCli(this IServiceCollection services)
     {
+        services.AddScoped<CommandLoop>();
+        return services;
     }
 }
