@@ -4,9 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PersonalAssistant.Contracts
+namespace PersonalAssistant.Contracts;
+
+public class Responses
 {
-    internal class Responses
-    {
-    }
 }
