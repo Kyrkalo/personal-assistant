@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using PersonalAssistant.Core.Abstractions;
+using PersonalAssistant.Infrastructure.AI;
 using PersonalAssistant.Infrastructure.Auth;
 using PersonalAssistant.Infrastructure.Calendar;
 
@@ -12,6 +13,7 @@ public static class DependencyInjection
         // Swap Fake* for real implementations when ready
         services.AddScoped<ICalendarService, FakeCalendarService>();
         services.AddScoped<IAuthService, FakeAuthService>();
+        services.AddScoped<IClaudeService, FakeClaudeService>();
 
         return services;
     }
